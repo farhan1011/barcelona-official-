@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+{% for players in pl_list %}
+  <div class="row">
+        <div class="col-md-3">
+             <div class="card" style="width: 18rem;">
+                <img class="card-img-top"src="{{players.pl_image}}"  alt="Card image cap">
+                <div class="card-body">
+
+                </div>
+             </div>
+        </div>
+      <div class="col-md-3">
+           <h5 class="card-text">Player Name : {{players.pl_name}}</h5>
+            <h5 class="card-text">Shirt Number : {{players.pl_number}}</h5>
+            <h5 class="card-text">Age: {{players.pl_age}}</h5>
+            <h5 class="card-text">Position : {{players.pl_position}}</h5>
+
+      </div>
+  </div>
+{% endfor %}
+{% endblock %}

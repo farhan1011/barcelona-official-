@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+{% for legends in legend_list %}
+  <div class="row">
+        <div class="col-md-3">
+             <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{legends.leg_image}}" alt="Card image cap">
+                <div class="card-body">
+
+                </div>
+             </div>
+        </div>
+      <div class="col-md-3">
+           <h5 class="card-text">Player Name : {{legends.leg_name}}</h5>
+
+            <h5 class="card-text">Age: {{legends.leg_age}}</h5>
+            <h5 class="card-text">Position : {{legends.leg_play}}</h5>
+
+      </div>
+  </div>
+{% endfor %}
+{% endblock %}

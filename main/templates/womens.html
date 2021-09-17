@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+{% for womens in womens_list %}
+  <div class="row">
+        <div class="col-md-3">
+             <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{womens.image}}" alt="Card image cap">
+                <div class="card-body">
+
+                </div>
+             </div>
+        </div>
+      <div class="col-md-3">
+           <h5 class="card-text">Player Name : {{womens.name}}</h5>
+
+            <h5 class="card-text">Age: {{womens.age}}</h5>
+            <h5 class="card-text">Position : {{womens.play}}</h5>
+
+      </div>
+  </div>
+{% endfor %}
+{% endblock %}
